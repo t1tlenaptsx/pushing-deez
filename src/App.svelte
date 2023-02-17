@@ -14,15 +14,18 @@
   }
 </script>
 
-<main>
+<main class="container">
   <h1 id="title">{title}</h1>
   <button on:click={handleClick}>Deez WHAT?</button>
-
+  <br>
   <a on:click={handleReset} id="reset">Reset</a>
 
 </main>
 
 <style>
+  .container {
+    display: block
+  }
   #title {
     filter: drop-shadow(0 0 2rem blue);
   }
@@ -31,6 +34,9 @@
   }
   #reset {
     cursor: pointer;
+    margin: 0px 2px 2px 0px;
+    position: relative;
+    top: 50px;
   }
   #reset:hover {
     color: red;
