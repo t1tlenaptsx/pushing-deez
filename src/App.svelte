@@ -1,9 +1,9 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
-  let arry = [""]
+  let arry = []
   const handleClick = () => {
-    arry.push("Nut")
+    arry.push("Nuts")
     arry = arry
   }
 </script>
@@ -17,13 +17,11 @@
       <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
     </a>
   </div>
+  <h1>Deez</h1>
+  <button on:click={handleClick}>Deez WHAT?</button>
   {#each arry as arry}
-  <p>{arry}</p>
+  <p>Deez {arry}</p>
   {/each}
-
-  <div class="card">
-    <button on:click={handleClick}>Click Me</button>
-  </div>
 </main>
 
 <style>
