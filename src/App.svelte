@@ -9,15 +9,7 @@
 </script>
 
 <main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer"> 
-      <img src="/vite.svg" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer"> 
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Deez</h1>
+  <h1>What is Deez?</h1>
   <button on:click={handleClick}>Deez WHAT?</button>
   {#each arry as arry}
   <p>Deez {arry}</p>
