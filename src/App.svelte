@@ -1,35 +1,38 @@
 <script>
   import svelteLogo from './assets/svelte.svg'
   import Counter from './lib/Counter.svelte'
-  let arry = []
+  let title = "What is Deez?"
   const handleClick = () => {
-    arry.push("Nuts")
-    arry = arry
+    if (title === "What is Deez?") {
+      title = "Deez Nuts"
+    }
+  }
+  const handleReset = () => {
+    if (title === "Deez Nuts") {
+      title = "What is Deez?"
+    }
   }
 </script>
 
 <main>
-  <h1>What is Deez?</h1>
+  <h1 id="title">{title}</h1>
   <button on:click={handleClick}>Deez WHAT?</button>
-  {#each arry as arry}
-  <p>Deez {arry}</p>
-  {/each}
+
+  <a on:click={handleReset} id="reset">Reset</a>
+
 </main>
 
 <style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  #title {
+    filter: drop-shadow(0 0 2rem blue);
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
+  button:hover {
+    filter: drop-shadow(0 0 7em #646cffaa);
   }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
+  #reset {
+    cursor: pointer;
   }
-  .read-the-docs {
-    color: #888;
+  #reset:hover {
+    color: red;
   }
 </style>
